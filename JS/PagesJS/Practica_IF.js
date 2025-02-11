@@ -67,38 +67,36 @@ function evaluarNota() {
 //parseFloat decimales
 //monto * 0.9
 
-function calcularDescuento() {
 
-    let monto = document.getElementById('monto').value; 
+    function calcularDescuento() {
+        let monto = document.getElementById('monto') ;
+        let numeroConvertido = parseFloat(monto);
+        console.log(numeroConvertido)
 
-    let numeroconvertido = parseFloat(monto)
-
-
-if (numeroconvertido 100 * 0.9 === 10%) {
-        
-    document.getElementById('mensajecalcularDescuento').innerText = `El numero ${numeroconvertido} aplica descuento`;
- } else {
-     document.getElementById('mensajecalcularDescuento').innerText = `El numero ${numeroconvertido} no aplica descuento `;
- }
+        if (numeroConvertido * 0.9 >= 10) {
+           
+             document.getElementById('mensajecalcularDescuento').innerText = `calcular Descuento`;
+         }
+         else if(numeroConvertido >= 90){
+            
+             document.getElementById('mensajecalcularDescuento').innerText = ` El número ${numeroConvertido} aplica descuento`;
+         }     
+         else {
+           
+             document.getElementById('mensajecalcularDescuento').innerText = ` El número ${numeroConvertido}  No aplica descuento`;
+         }
     
-    console.log(numeroconvertido)
-}
+        }
 
-
-function verificarMayorMenor() {
-
-let edad = document.getElementById('edadSimple');
-
-console.log(edadSimple)
-
-if (edad >= 18) {
-
-  
-    alert(`Eres mayor de edad  ${edad} `)
-} else {
+    function verificarMayorMenor() {
+        let edad = parseInt(document.getElementById('edadSimple').value);
     
-    alert(`No eres menor de edad  ${edad}`)
+        console.log(edad);
     
-}
+        if (edad >= 18) {
+            alert(`Eres mayor de edad ${edad} `)
+        } else {
+            alert(`Eres menor de edad ${edad} `)
+        }
+    }
 
-}
