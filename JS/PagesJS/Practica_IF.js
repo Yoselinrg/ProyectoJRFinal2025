@@ -66,3 +66,39 @@ function evaluarNota() {
 //parse int
 //parseFloat decimales
 //monto * 0.9
+
+function calcularDescuento() {
+
+    let monto = document.getElementById('monto').value; 
+
+    let numeroconvertido = parseFloat(monto)
+
+
+if (numeroconvertido 100 * 0.9 === 10%) {
+        
+    document.getElementById('mensajecalcularDescuento').innerText = `El numero ${numeroconvertido} aplica descuento`;
+ } else {
+     document.getElementById('mensajecalcularDescuento').innerText = `El numero ${numeroconvertido} no aplica descuento `;
+ }
+    
+    console.log(numeroconvertido)
+}
+
+
+function verificarMayorMenor() {
+
+let edad = document.getElementById('edadSimple');
+
+console.log(edadSimple)
+
+if (edad >= 18) {
+
+  
+    alert(`Eres mayor de edad  ${edad} `)
+} else {
+    
+    alert(`No eres menor de edad  ${edad}`)
+    
+}
+
+}
