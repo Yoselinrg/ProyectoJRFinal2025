@@ -130,3 +130,20 @@ function personasActivas() {
 
 //3-4-5
 //Entregable 3 Proyecto 10 febrero a las 12 pm
+
+//caso 3
+
+function primeraMayorDeEdad() {
+  // Definir un array con edades
+  let edades = [25, 17, 30, 16, 40];
+
+  // Encontrar la primera edad mayor o igual a 18
+  let mayorEdad = edades.find(edad => edad >= 18);
+
+  // Mostrar el resultado en el elemento con ID 'resultadoMayor'
+  if (mayorEdad !== undefined) {
+      document.getElementById('resultadoMayor').innerText = `La primera persona mayor de edad tiene ${mayorEdad} años `;
+  } else {
+      document.getElementById('resultadoMayor').innerText = `` 
+    }       
+}
